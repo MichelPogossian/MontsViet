@@ -14,6 +14,21 @@ horaires et coordonnées, dans les couleurs crème et rouge laqué du flyer.
 - Cartes des plats avec effet de relief 3D au survol, étiquettes « coup de pinceau » et vapeur animée sur le phở.
 - Section sur place et à emporter, infos pratiques avec statut d'ouverture en direct et plan d'accès, footer illustré.
 
+## Mise en ligne
+
+- Site public (here.now) : https://civic-bamboo-6b3c.here.now/
+- Copie Higgsfield (accès réservé au compte tant que le site n'est pas publié sur le feed) : https://montsviet.higgsfield.app/
+
+Pour republier sur here.now après une modification :
+
+```bash
+node scripts/export-static.mjs            # build + rendu statique dans static-export/
+node scripts/publish-herenow.mjs static-export --slug civic-bamboo-6b3c
+```
+
+Sans clé API here.now, un site est anonyme et expire au bout de 24 h : il faut le réclamer via le lien de claim reçu
+lors de la première publication, ou définir `HERENOW_API_KEY` (clé obtenue sur https://here.now) pour publier un site permanent.
+
 ## Développement
 
 Le projet vit dans `app/` (React 19, TanStack Start, Tailwind v4, GSAP, Lenis) et se déploie comme un Worker Cloudflare

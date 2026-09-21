@@ -1,1 +1,4 @@
+.herenow/
 node_modules
+static-export/
+app/dist/

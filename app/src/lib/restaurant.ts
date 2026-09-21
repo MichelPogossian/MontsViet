@@ -1,7 +1,7 @@
 // Single source of truth for everything printed on the flyer.
 // Every section of the site reads from here so a change lands everywhere at once.
 
-export const SITE_URL = "https://montsviet.here.now";
+export const SITE_URL = "https://civic-bamboo-6b3c.here.now";
 
 export const RESTAURANT = {
   name: "Monts Việt",
